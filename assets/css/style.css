@@ -1185,7 +1185,7 @@ section .container {
 }
 .v-grid-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
 	column-gap: 2rem;
 	row-gap: 1.7rem;
 }
@@ -1197,7 +1197,13 @@ section .container {
 	align-items: center;
 	text-align: center;
 }
+.v-grid-container .v-each-grid-item .v-each-icon-name {
+	font-size: 0.85rem;
+}
 
 .v-grid-container .v-each-grid-item > * .img-fluid {
 	width: 100%;
+}
+.nav-menu li a {
+	font-size: 1rem;
 }
