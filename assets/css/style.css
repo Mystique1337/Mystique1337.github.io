@@ -1183,3 +1183,21 @@ section .container {
 .v-grid-it strong {
 	text-align: start;
 }
+.v-grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+	column-gap: 2rem;
+	row-gap: 1.7rem;
+}
+.v-grid-container .v-each-grid-item > * {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	margin-bottom: 0;
+	align-items: center;
+	text-align: center;
+}
+
+.v-grid-container .v-each-grid-item > * .img-fluid {
+	width: 100%;
+}
