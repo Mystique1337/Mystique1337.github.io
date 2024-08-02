@@ -368,7 +368,12 @@ section.section-show {
 
 section .container {
 	background: rgba(0, 0, 0, 0);
-	padding: 30px;
+	padding: 1rem;
+}
+@media all and (min-width: 768px) {
+	section .container {
+		padding: 30px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -1161,4 +1166,20 @@ section .container {
 		right: 0;
 		transform: translateX(-50%);
 	}
+}
+
+.v-grid-it {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-bottom: 1.5rem;
+	text-align: start;
+	row-gap: 1rem;
+}
+@media all and (min-width: 768px) {
+	.v-grid-it {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+.v-grid-it strong {
+	text-align: start;
 }
