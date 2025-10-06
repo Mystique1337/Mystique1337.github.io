@@ -1,0 +1,23 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mystique1337.github.io/sitemap.xml
+
+# Disallow admin area from search engines
+User-agent: *
+Disallow: /admin/
+
+# Disallow uploads folder (optional - uncomment if needed)
+# Disallow: /public/images/uploads/
+
+# Allow specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (optional - uncomment if needed)
+# Crawl-delay: 10

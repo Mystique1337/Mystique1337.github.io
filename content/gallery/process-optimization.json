@@ -1,0 +1,10 @@
+{
+  "title": "Chemical Process Optimization Project",
+  "image": "/assets/img/gallery/process-optimization.jpg",
+  "caption": "Machine learning applied to chemical process optimization",
+  "description": "Research project combining chemical engineering principles with machine learning for process optimization and predictive maintenance.",
+  "date": "2023-06-15",
+  "personas": ["chemical-engineer", "ai-ml", "researcher"],
+  "order": 1,
+  "featured": true
+}

@@ -1,0 +1,27 @@
+{
+  "category": "Programming Languages",
+  "items": [
+    {
+      "name": "Python",
+      "icon": "/assets/icons/Python.png",
+      "proficiency": "Expert"
+    },
+    {
+      "name": "R",
+      "icon": "/assets/icons/R.png",
+      "proficiency": "Advanced"
+    },
+    {
+      "name": "C++",
+      "icon": "/assets/icons/Cpp.png",
+      "proficiency": "Intermediate"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "/assets/icons/JavaScript.png",
+      "proficiency": "Intermediate"
+    }
+  ],
+  "personas": ["ai-ml", "chemical-engineer", "researcher"],
+  "order": 1
+}

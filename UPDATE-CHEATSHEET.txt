@@ -1,0 +1,251 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                   PORTFOLIO UPDATE CHEAT SHEET                           ║
+║                        Quick Copy-Paste Guide                            ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 📝 ADD NEW WORK EXPERIENCE                                              │
+└─────────────────────────────────────────────────────────────────────────┘
+
+FILE: index-new.html (around line 240)
+SEARCH FOR: <!-- Experience Item -->
+
+COPY & PASTE THIS:
+────────────────────────────────────────────────────────────────────────
+<!-- Experience Item -->
+<div class="timeline-item" data-personas="ai-ml, researcher">
+    <div class="timeline-marker"></div>
+    <div class="timeline-content">
+        <div class="experience-card">
+            <div class="experience-header">
+                <div class="experience-logo">
+                    <img src="assets/img/experience/LOGO.png" alt="Company">
+                </div>
+                <div class="experience-info">
+                    <h3 class="experience-title">JOB TITLE HERE</h3>
+                    <p class="experience-company">
+                        <a href="https://company.com" target="_blank">COMPANY NAME</a>
+                    </p>
+                    <span class="experience-period">
+                        <i class="far fa-calendar"></i> Jan 2024 - Present
+                    </span>
+                </div>
+            </div>
+            <div class="experience-description">
+                <p>Brief description of role</p>
+                <ul class="experience-highlights">
+                    <li>Achievement 1</li>
+                    <li>Achievement 2</li>
+                    <li>Achievement 3</li>
+                </ul>
+            </div>
+            <div class="experience-tags">
+                <span class="tag">Skill 1</span>
+                <span class="tag">Skill 2</span>
+            </div>
+        </div>
+    </div>
+</div>
+────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🚀 ADD NEW PROJECT                                                      │
+└─────────────────────────────────────────────────────────────────────────┘
+
+FILE: index-new.html (around line 360)
+SEARCH FOR: <!-- Project -->
+
+COPY & PASTE THIS:
+────────────────────────────────────────────────────────────────────────
+<!-- Project -->
+<div class="project-card" data-personas="ai-ml">
+    <div class="project-image">
+        <img src="assets/img/projects/PROJECT_IMAGE.jpg" alt="Project">
+        <div class="project-overlay">
+            <a href="https://live-demo.com" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/username/repo" target="_blank" class="project-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+    <div class="project-content">
+        <h3 class="project-title">PROJECT NAME</h3>
+        <p class="project-description">
+            Project description goes here. Explain what it does.
+        </p>
+        <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">Flask</span>
+        </div>
+    </div>
+</div>
+────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🛠️ ADD NEW SKILL                                                        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+FILE: index-new.html (around line 490)
+SEARCH FOR: <div class="skill-item">
+
+COPY & PASTE THIS:
+────────────────────────────────────────────────────────────────────────
+<div class="skill-item">
+    <img src="assets/icons/SKILL_ICON.png" alt="Skill Name">
+    <span>Skill Name</span>
+</div>
+────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 📧 UPDATE CONTACT INFO                                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+FILE: index-new.html
+
+┌─────────────────────────┬───────────────────────────────────────────────┐
+│ What to Change          │ Search For                                    │
+├─────────────────────────┼───────────────────────────────────────────────┤
+│ Email                   │ chidi.ashinze@gmail.com                       │
+│ GitHub                  │ https://github.com/Mystique1337             │
+│ LinkedIn                │ ashinze-emmanuel-5a6757193                    │
+│ Twitter                 │ ashinze_ec                                    │
+│ Name                    │ Ashinze Emmanuel                              │
+└─────────────────────────┴───────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🎨 CHANGE COLORS                                                        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+FILE: assets/css/modern.css (lines 10-20)
+
+FIND:
+    --primary: #3B82F6;
+
+REPLACE WITH YOUR COLOR:
+    --primary: #YOUR_HEX_CODE;
+
+POPULAR COLORS:
+    Blue:   #3B82F6    Purple: #8B5CF6    Green:  #10B981
+    Red:    #EF4444    Orange: #F97316    Pink:   #EC4899
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🎯 PERSONA TAGS EXPLAINED                                               │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Use these in: data-personas=""
+
+┌──────────────────────┬──────────────────────────────────────────────────┐
+│ Tag                  │ When to Use                                      │
+├──────────────────────┼──────────────────────────────────────────────────┤
+│ ai-ml                │ Machine Learning / AI projects & roles           │
+│ researcher           │ Research positions & academic projects           │
+│ chemical-engineer    │ Chemical engineering work & projects             │
+└──────────────────────┴──────────────────────────────────────────────────┘
+
+EXAMPLES:
+    One persona:     data-personas="ai-ml"
+    Multiple:        data-personas="ai-ml, researcher"
+    All three:       data-personas="ai-ml, researcher, chemical-engineer"
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🖼️ IMAGE LOCATIONS                                                      │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────┬────────────────────────────────────┐
+│ Type                               │ Save to Folder                     │
+├────────────────────────────────────┼────────────────────────────────────┤
+│ Your profile photo                 │ assets/img/about/                  │
+│ Company logos                      │ assets/img/experience/             │
+│ Project screenshots                │ assets/img/projects/               │
+│ Skill icons (Python, etc)          │ assets/icons/                      │
+└────────────────────────────────────┴────────────────────────────────────┘
+
+RECOMMENDED SIZES:
+    Profile photo:   400x400px (square)
+    Company logos:   200x200px (PNG with transparent background)
+    Project images:  600x400px (landscape)
+    Skill icons:     50x50px   (PNG with transparent background)
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ ⚡ QUICK COMMANDS                                                        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+START LOCAL SERVER:
+    cd "path/to/portfolio"
+    python -m http.server 8000
+    
+    Then open: http://localhost:8000/index-new.html
+
+STOP SERVER:
+    Press: Ctrl + C
+
+HARD REFRESH BROWSER:
+    Windows: Ctrl + Shift + R
+    Mac:     Cmd + Shift + R
+
+CREATE BACKUP:
+    Copy-Item index-new.html index-new.backup.html
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 📚 DOCUMENTATION FILES                                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    📄 QUICK-REFERENCE.md    ← Super quick guide (this file)
+    📄 CONTENT-GUIDE.md      ← Detailed step-by-step instructions
+    📄 README.md             ← Setup & deployment guide
+    📄 CHANGELOG.md          ← All features & changes
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ ✅ UPDATE WORKFLOW                                                      │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    1. Open index-new.html in VS Code
+    2. Find the section you want to update
+    3. Copy template from above
+    4. Paste and modify
+    5. Save file (Ctrl + S)
+    6. Refresh browser (Ctrl + Shift + R)
+    7. Check if it looks good
+    8. Commit to Git (optional):
+       git add .
+       git commit -m "Updated experience"
+       git push origin main
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🆘 TROUBLESHOOTING                                                      │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    ❌ Changes not showing?
+    ✅ Hard refresh: Ctrl + Shift + R
+    
+    ❌ Image not loading?
+    ✅ Check file path is exactly right
+    ✅ Check file actually exists in folder
+    
+    ❌ Layout broken?
+    ✅ Check all <div> tags are closed: </div>
+    ✅ Check no missing quotes: href="..."
+    
+    ❌ Colors not changing?
+    ✅ Edit assets/css/modern.css
+    ✅ Clear browser cache
+    
+    ❌ Formspree not working?
+    ✅ Replace YOUR_FORMSPREE_ID with actual ID
+    ✅ Get free ID from formspree.io
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                          READY TO UPDATE?                                ║
+║                                                                          ║
+║  1. Open index-new.html                                                  ║
+║  2. Use Ctrl+F to search                                                 ║
+║  3. Copy template above                                                  ║
+║  4. Modify and save                                                      ║
+║  5. Test locally                                                         ║
+║  6. Deploy!                                                              ║
+║                                                                          ║
+║               🎉 Keep Your Portfolio Fresh! 🎉                           ║
+╚══════════════════════════════════════════════════════════════════════════╝

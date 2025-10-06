@@ -1,0 +1,12 @@
+{
+  "title": "N-Puzzle Solver using A* Algorithm",
+  "description": "An intelligent puzzle solver implementing the A* search algorithm with multiple heuristic functions for optimal pathfinding.",
+  "image": "/assets/img/projects/n_puzzle_solver.jpg",
+  "demoUrl": "",
+  "sourceUrl": "https://github.com/Mystique1337/n-puzzle-solver",
+  "technologies": ["Python", "A* Algorithm", "Heuristics", "Search Algorithms"],
+  "body": "# N-Puzzle Solver\n\nDeveloped an efficient N-puzzle solver using the A* search algorithm with multiple heuristic functions including Manhattan distance and linear conflict.\n\n## Features\n- Multiple heuristic options\n- Optimal solution guarantee\n- Performance metrics tracking\n- Visualization of solution path\n\n## Technical Implementation\nImplemented using Python with focus on algorithm efficiency and memory optimization.",
+  "personas": ["ai-ml", "researcher"],
+  "order": 1,
+  "featured": true
+}

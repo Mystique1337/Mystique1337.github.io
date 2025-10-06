@@ -1,0 +1,27 @@
+{
+  "category": "ML/AI Frameworks",
+  "items": [
+    {
+      "name": "TensorFlow",
+      "icon": "/assets/icons/TensorFlow.png",
+      "proficiency": "Advanced"
+    },
+    {
+      "name": "PyTorch",
+      "icon": "/assets/icons/PyTorch.png",
+      "proficiency": "Advanced"
+    },
+    {
+      "name": "Keras",
+      "icon": "/assets/icons/Keras.png",
+      "proficiency": "Expert"
+    },
+    {
+      "name": "scikit-learn",
+      "icon": "/assets/icons/scikit-learn.png",
+      "proficiency": "Expert"
+    }
+  ],
+  "personas": ["ai-ml", "researcher"],
+  "order": 2
+}

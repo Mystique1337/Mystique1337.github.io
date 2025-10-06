@@ -1,0 +1,202 @@
+backend:
+  name: github
+  repo: Mystique1337/Mystique1337.github.io
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Publish mode - editorial workflow allows draft/review/publish
+publish_mode: simple
+
+# Media files configuration
+media_folder: "public/images/uploads"
+public_folder: "/public/images/uploads"
+
+# Collections
+collections:
+  # Site Settings
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Site Configuration"
+        name: "site"
+        file: "content/site.json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "GitHub", name: "github", widget: "string", required: false }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "Twitter/X", name: "twitter", widget: "string", required: false }
+              - { label: "Gmail", name: "gmail", widget: "string", required: false }
+          - label: "Personas"
+            name: "personas"
+            widget: "list"
+            hint: "Add persona slugs (e.g., chemical-engineer, researcher, ai-ml)"
+            field: { label: "Persona Slug", name: "slug", widget: "string" }
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Keywords", name: "keywords", widget: "string" }
+              - { label: "OG Image", name: "ogImage", widget: "image", required: false }
+
+  # Experience
+  - name: "experience"
+    label: "Experience"
+    folder: "content/experience"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: "Company", name: "company", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "Start Date", name: "startDate", widget: "date" }
+      - { label: "End Date", name: "endDate", widget: "date", required: false, hint: "Leave empty for current position" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Personas"
+        name: "personas"
+        widget: "select"
+        multiple: true
+        options: ["chemical-engineer", "researcher", "ai-ml"]
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: true }
+
+  # Projects
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Demo URL", name: "demoUrl", widget: "string", required: false }
+      - { label: "Source URL", name: "sourceUrl", widget: "string", required: false }
+      - label: "Technologies"
+        name: "technologies"
+        widget: "list"
+        field: { label: "Technology", name: "tech", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
+      - label: "Personas"
+        name: "personas"
+        widget: "select"
+        multiple: true
+        options: ["chemical-engineer", "researcher", "ai-ml"]
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: true }
+
+  # Publications
+  - name: "publications"
+    label: "Publications"
+    folder: "content/publications"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Authors", name: "authors", widget: "string" }
+      - { label: "Publication", name: "publication", widget: "string", hint: "Journal/Conference name" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Abstract", name: "abstract", widget: "text" }
+      - { label: "DOI/URL", name: "url", widget: "string", required: false }
+      - { label: "PDF", name: "pdf", widget: "file", required: false }
+      - label: "Personas"
+        name: "personas"
+        widget: "select"
+        multiple: true
+        options: ["chemical-engineer", "researcher", "ai-ml"]
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+
+  # Education
+  - name: "education"
+    label: "Education"
+    folder: "content/education"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Institution", name: "institution", widget: "string" }
+      - { label: "Degree", name: "degree", widget: "string" }
+      - { label: "Field of Study", name: "field", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "Start Date", name: "startDate", widget: "date" }
+      - { label: "End Date", name: "endDate", widget: "date", required: false }
+      - { label: "Description", name: "description", widget: "markdown", required: false }
+      - { label: "GPA", name: "gpa", widget: "string", required: false }
+      - label: "Honors"
+        name: "honors"
+        widget: "list"
+        required: false
+        field: { label: "Honor", name: "honor", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+
+  # Certifications
+  - name: "certifications"
+    label: "Certifications"
+    folder: "content/certifications"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Issuer", name: "issuer", widget: "string" }
+      - { label: "Issue Date", name: "issueDate", widget: "date" }
+      - { label: "Expiry Date", name: "expiryDate", widget: "date", required: false }
+      - { label: "Credential ID", name: "credentialId", widget: "string", required: false }
+      - { label: "Credential URL", name: "credentialUrl", widget: "string", required: false }
+      - { label: "Badge Image", name: "badge", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Personas"
+        name: "personas"
+        widget: "select"
+        multiple: true
+        options: ["chemical-engineer", "researcher", "ai-ml"]
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+
+  # Skills
+  - name: "skills"
+    label: "Skills"
+    folder: "content/skills"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Category", name: "category", widget: "string", hint: "e.g., Programming Languages, Frameworks, Tools" }
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "image", required: false }
+          - { label: "Proficiency", name: "proficiency", widget: "select", options: ["Beginner", "Intermediate", "Advanced", "Expert"], required: false }
+      - label: "Personas"
+        name: "personas"
+        widget: "select"
+        multiple: true
+        options: ["chemical-engineer", "researcher", "ai-ml"]
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+
+  # Gallery
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Caption", name: "caption", widget: "text", required: false }
+      - { label: "Description", name: "description", widget: "markdown", required: false }
+      - { label: "Date", name: "date", widget: "date" }
+      - label: "Personas"
+        name: "personas"
+        widget: "select"
+        multiple: true
+        options: ["chemical-engineer", "researcher", "ai-ml"]
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
