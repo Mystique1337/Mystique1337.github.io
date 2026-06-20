@@ -2229,3 +2229,46 @@ body {
 
 /* Featured automation builds spacing */
 .auto-builds { margin-bottom: var(--spacing-2xl); }
+
+/* ===== Selected Work: filter bar + category badges ===== */
+.work-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: var(--spacing-xl);
+}
+.filter-btn {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.55rem 1.15rem;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.filter-btn:hover { color: var(--primary); border-color: var(--primary); }
+.filter-btn.active { color: #fff; background: var(--gradient-primary); border-color: transparent; }
+
+.project-image { position: relative; }
+.project-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #fff;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.badge-model { background: rgba(139, 92, 246, 0.92); }
+.badge-app { background: rgba(59, 130, 246, 0.92); }
+.badge-automation { background: rgba(16, 185, 129, 0.92); }
+.badge-data { background: rgba(245, 158, 11, 0.92); }

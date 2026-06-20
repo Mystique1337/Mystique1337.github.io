@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/modern.css?v=20260620">
+    <link rel="stylesheet" href="assets/css/modern.css?v=20260620b">
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
@@ -99,9 +99,8 @@
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#leadership" class="nav-link">Leadership</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
                 <li><a href="#automation" class="nav-link">Automation</a></li>
-                <li><a href="#models" class="nav-link">AI Models</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -1466,308 +1465,310 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Selected Work Section -->
     <section class="section projects" id="projects">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">My Work</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-subtitle">
+                    Open-source models, AI/ML applications, automations, and data-science work &mdash; filter to explore.
+                    Every item links to a live demo, model, or repository.
+                </p>
             </div>
-            
+
+            <div class="work-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="model">Open-Source Models</button>
+                <button class="filter-btn" data-filter="app">AI/ML Apps</button>
+                <button class="filter-btn" data-filter="automation">Automations</button>
+                <button class="filter-btn" data-filter="data">Data Science</button>
+            </div>
+
             <div class="projects-grid">
-                <!-- Flagship: SafetyBuddy -->
-                <div class="project-card" data-personas="ai-ml, researcher, chemical-engineer">
+                <div class="project-card" data-filter="model">
                     <div class="project-image">
-                        <img src="assets/img/projects/live/safetybuddy.jpg" alt="SafetyBuddy live app" loading="lazy" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://chidi-ashinze--safetybuddy.modal.run/" target="_blank" rel="noopener" class="project-link" title="Live Demo">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/Mystique1337/safetybuddy" target="_blank" rel="noopener" class="project-link" title="Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-model">Open-Source LLM</span>
+                        <img src="assets/img/projects/live/naija-petro.jpg" alt="Naija-Petro 8B &amp; 32B" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://naija-petro.shinzii.tech/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a><a href="https://huggingface.co/Shinzmann/naija-petro-8b" target="_blank" rel="noopener" class="project-link" title="Model"><span class="hf-icon">🤗</span></a><a href="https://github.com/Mystique1337/naija-petro" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Naija-Petro 8B &amp; 32B</h3>
+                        <p class="project-description">Nigeria's first domain-specific LLM for Oil &amp; Gas. Qwen3 fine-tuned with QLoRA/Unsloth on 33,000+ instruction pairs, paired with a self-updating dynamic RAG assistant. Served on Modal (vLLM) and Hugging Face Spaces.</p>
+                        <div class="project-tech"><span class="tech-tag">Qwen3</span><span class="tech-tag">QLoRA</span><span class="tech-tag">RAG</span><span class="tech-tag">Modal</span><span class="tech-tag">HF Spaces</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="model">
+                    <div class="project-image">
+                        <span class="project-badge badge-model">Open-Source LLM</span>
+                        <img src="assets/img/projects/live/naija-persona.jpg" alt="Naija-Persona (Naija-Reviewer 8B)" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://switteefranca2-0--naijapersona-web.modal.run/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a><a href="https://huggingface.co/Shinzmann/naija-reviewer-8b-v2" target="_blank" rel="noopener" class="project-link" title="Model"><span class="hf-icon">🤗</span></a><a href="https://github.com/Mystique1337/telcoproject" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Naija-Persona (Naija-Reviewer 8B)</h3>
+                        <p class="project-description">User-modelling &amp; recommendation agent for review simulation (InsideNaija) and product recommendation (ShopEasy), powered by a Llama 3.1 8B fine-tuned on 20,000 Nigerian reviews. Built with LangGraph, Langfuse, Pinecone, and Cohere.</p>
+                        <div class="project-tech"><span class="tech-tag">Llama 3.1</span><span class="tech-tag">LangGraph</span><span class="tech-tag">Pinecone</span><span class="tech-tag">Modal</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="model">
+                    <div class="project-image">
+                        <span class="project-badge badge-model">Text-to-Speech</span>
+                        <img src="assets/img/projects/live/soro-tts.jpg" alt="Soro TTS - Yoruba, Hausa &amp; Igbo" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://huggingface.co/Shinzmann/sorotts" target="_blank" rel="noopener" class="project-link" title="Models"><span class="hf-icon">🤗</span></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Soro TTS - Yoruba, Hausa &amp; Igbo</h3>
+                        <p class="project-description">A family of neural text-to-speech models bringing natural voice synthesis to Nigerian languages (Yoruba, Hausa, Igbo, and Pidgin), based on Orpheus-3B, enabling voice-first AI for underserved language communities.</p>
+                        <div class="project-tech"><span class="tech-tag">Orpheus-3B</span><span class="tech-tag">TTS</span><span class="tech-tag">Multilingual</span><span class="tech-tag">Hugging Face</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="model">
+                    <div class="project-image">
+                        <span class="project-badge badge-model">Voice AI &middot; Edge</span>
+                        <img src="assets/img/projects/live/naija-solar.jpg" alt="Naija Solar" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://huggingface.co/spaces/Shinzmann/naija-solar" target="_blank" rel="noopener" class="project-link" title="Live Space"><i class="fas fa-external-link-alt"></i></a><a href="https://github.com/Mystique1337/naija-solar" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Naija Solar</h3>
+                        <p class="project-description">Voice-first solar system sizing for Nigeria in five languages, built entirely with sub-4B models for the Build Small Hackathon. Affordable, offline-friendly clean-energy access at the edge.</p>
+                        <div class="project-tech"><span class="tech-tag">Sub-4B Models</span><span class="tech-tag">Voice AI</span><span class="tech-tag">HF Spaces</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="app">
+                    <div class="project-image">
+                        <span class="project-badge badge-app">AI/ML App</span>
+                        <img src="assets/img/projects/live/safetybuddy.jpg" alt="SafetyBuddy - Multimodal Safety Platform" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://chidi-ashinze--safetybuddy.modal.run/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a><a href="https://github.com/Mystique1337/safetybuddy" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">SafetyBuddy - Multimodal Safety Platform</h3>
-                        <p class="project-description">
-                            End-to-end safety intelligence platform combining <strong>YOLO26-nano real-time PPE detection</strong>
-                            (mAP50 0.691, 2,540 FPS on CPU) with RAG over OSHA regulations and GPT-4o reasoning. Supports safety
-                            advisory, incident root-cause analysis, compliance auditing, and live video alerting. Deployed on AWS EC2.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">YOLO26</span>
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">GPT-4o</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">AWS EC2</span>
-                        </div>
+                        <p class="project-description">Safety intelligence platform combining YOLO26-nano real-time PPE detection (mAP50 0.691, 2,540 FPS on CPU) with RAG over OSHA regulations and GPT-4o reasoning for advisory, incident analysis, and live alerting. Deployed on AWS EC2.</p>
+                        <div class="project-tech"><span class="tech-tag">YOLO26</span><span class="tech-tag">RAG</span><span class="tech-tag">GPT-4o</span><span class="tech-tag">AWS EC2</span></div>
                     </div>
                 </div>
 
-                <!-- Flagship: Hybrid CNN-VLM Fire Detection -->
-                <div class="project-card" data-personas="ai-ml, researcher, chemical-engineer">
+                <div class="project-card" data-filter="app">
                     <div class="project-image">
-                        <img src="assets/img/projects/live/fire-vlm.jpg" alt="Emberwatch fire detection live app" loading="lazy" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://chidi-ashinze--fire-vlm.modal.run/" target="_blank" rel="noopener" class="project-link" title="Live Demo">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/Mystique1337/Fire-and-smoke-detection" target="_blank" rel="noopener" class="project-link" title="Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-app">AI/ML App</span>
+                        <img src="assets/img/projects/live/fire-vlm.jpg" alt="Emberwatch - CNN&ndash;VLM Fire Detection" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://chidi-ashinze--fire-vlm.modal.run/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a></div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Emberwatch - Hybrid CNN-VLM Fire Detection</h3>
-                        <p class="project-description">
-                            Two-stage fire/smoke detection pipeline for Oil &amp; Gas facilities pairing <strong>YOLOv8s</strong>
-                            (mAP50 83.4%, 0.5&nbsp;ms inference on A100, trained on 30,337 images) with a <strong>Vision Language
-                            Model</strong> for context-aware severity assessment and emergency-response recommendations.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">YOLOv8</span>
-                            <span class="tech-tag">VLM</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Modal</span>
-                            <span class="tech-tag">PyTorch</span>
-                        </div>
+                        <h3 class="project-title">Emberwatch - CNN&ndash;VLM Fire Detection</h3>
+                        <p class="project-description">Two-stage fire/smoke detection for Oil &amp; Gas facilities pairing YOLOv8s (mAP50 83.4%, 0.5 ms inference on A100, trained on 30,337 images) with a Vision Language Model for context-aware severity assessment and emergency-response recommendations.</p>
+                        <div class="project-tech"><span class="tech-tag">YOLOv8</span><span class="tech-tag">VLM</span><span class="tech-tag">NVIDIA</span><span class="tech-tag">Modal</span></div>
                     </div>
                 </div>
 
-                <!-- Flagship: Chess Move Predictor -->
-                <div class="project-card" data-personas="ai-ml">
+                <div class="project-card" data-filter="app">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&h=600&fit=crop" alt="Chess Move Predictor" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Mystique1337/chess-playing-model" target="_blank" rel="noopener" class="project-link" title="Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Chess Move Predictor</h3>
-                        <p class="project-description">
-                            Computer-vision-based board analyzer and move predictor with an integrated preprocessing and
-                            inference pipeline that reads a physical board state and recommends the next move.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Inference Pipeline</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flagship: Plastic Pollution Estimator -->
-                <div class="project-card" data-personas="ai-ml, chemical-engineer">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=600&fit=crop" alt="Plastic Pollution Estimator" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://plasticpollution.streamlit.app/" target="_blank" rel="noopener" class="project-link" title="Live App">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/Mystique1337/PLASTIC-POLLUTION-CALCULATOR" target="_blank" rel="noopener" class="project-link" title="Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-app">Computer Vision</span>
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=600&fit=crop" alt="Plastic Pollution Estimator" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://plasticpollution.streamlit.app/" target="_blank" rel="noopener" class="project-link" title="Live App"><i class="fas fa-external-link-alt"></i></a><a href="https://github.com/Mystique1337/PLASTIC-POLLUTION-CALCULATOR" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Plastic Pollution Estimator</h3>
-                        <p class="project-description">
-                            Computer-vision prototype for real-time quantification of plastic pollution, with an optimized
-                            baseline tuned for the speed/accuracy trade-off. Deployed as a live Streamlit app.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
+                        <p class="project-description">Computer-vision prototype for real-time quantification of plastic pollution, with an optimized baseline tuned for the speed/accuracy trade-off. Deployed as a live Streamlit app.</p>
+                        <div class="project-tech"><span class="tech-tag">Computer Vision</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Python</span></div>
                     </div>
                 </div>
 
-                <!-- Flagship: IoT Anomaly Detection -->
-                <div class="project-card" data-personas="ai-ml, chemical-engineer, researcher">
+                <div class="project-card" data-filter="app">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop" alt="IoT Anomaly Detection" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Mystique1337/iot-anomaly" target="_blank" rel="noopener" class="project-link" title="Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-app">Hackathon &middot; CV</span>
+                        <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&h=600&fit=crop" alt="Chess Move Predictor" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://github.com/Mystique1337/chess-playing-model" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Chess Move Predictor</h3>
+                        <p class="project-description">Computer-vision board analyzer and move predictor built during a robotics hackathon, with an integrated preprocessing and inference pipeline that reads a physical board state and recommends the next move.</p>
+                        <div class="project-tech"><span class="tech-tag">Computer Vision</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Robotics</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="app">
+                    <div class="project-image">
+                        <span class="project-badge badge-app">AI/ML App</span>
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop" alt="IoT Anomaly Detection" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://github.com/Mystique1337/iot-anomaly" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">IoT Anomaly Detection</h3>
-                        <p class="project-description">
-                            Anomaly-detection system for IoT/industrial sensor streams, surfacing equipment faults and
-                            abnormal conditions early to support predictive maintenance and reliability.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Anomaly Detection</span>
-                            <span class="tech-tag">Time Series</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">IoT</span>
-                        </div>
+                        <p class="project-description">Anomaly-detection system for IoT/industrial sensor streams, surfacing equipment faults and abnormal conditions early to support predictive maintenance and reliability.</p>
+                        <div class="project-tech"><span class="tech-tag">Anomaly Detection</span><span class="tech-tag">Time Series</span><span class="tech-tag">Python</span><span class="tech-tag">IoT</span></div>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="project-card" data-personas="ai-ml, researcher">
+                <div class="project-card" data-filter="app">
                     <div class="project-image">
-                        <img src="https://github.com/Mystique1337/QUANTIFY/blob/main/static/images/Artillery.png?raw=true" alt="Quantify">
-                        <div class="project-overlay">
-                            <a href="https://replit.com/@chidiashinze/QUANTIFY" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/Mystique1337/QUANTIFY" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-app">AI/ML App</span>
+                        <img src="https://github.com/Mystique1337/QUANTIFY/blob/main/static/images/Artillery.png?raw=true" alt="Quantify" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://replit.com/@chidiashinze/QUANTIFY" target="_blank" rel="noopener" class="project-link" title="Live"><i class="fas fa-external-link-alt"></i></a><a href="https://github.com/Mystique1337/QUANTIFY" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Quantify</h3>
-                        <p class="project-description">
-                            An open-source application that tracks CO2 levels to promote environmental sustainability. 
-                            Collects sensor data, analyzes it, and provides actionable insights to reduce carbon footprint.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">Data Analysis</span>
-                        </div>
+                        <p class="project-description">Open-source application that tracks CO2 levels to promote environmental sustainability, collecting sensor data, analyzing it, and providing actionable insights to reduce carbon footprint.</p>
+                        <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">IoT</span><span class="tech-tag">Data Analysis</span></div>
                     </div>
                 </div>
 
-                
-                <!-- Project 6 -->
-                <div class="project-card" data-personas="ai-ml">
+                <div class="project-card" data-filter="app">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&h=600&fit=crop" alt="Rail Track App">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Mystique1337/RAIL-TRACK-APP" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-app">Computer Vision</span>
+                        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&h=600&fit=crop" alt="Rail Track App" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://github.com/Mystique1337/RAIL-TRACK-APP" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Rail Track App</h3>
-                        <p class="project-description">
-                            A web application that effectively classifies rail tracks as dirty or filled with leaves 
-                            for effective preventive maintenance in railways.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Flask</span>
-                        </div>
+                        <p class="project-description">Web application that classifies rail tracks as dirty or leaf-covered to support effective preventive maintenance in railways.</p>
+                        <div class="project-tech"><span class="tech-tag">Computer Vision</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">Flask</span></div>
                     </div>
                 </div>
-                
-                <!-- Project 7 -->
-                <div class="project-card" data-personas="ai-ml, researcher">
+
+                <div class="project-card" data-filter="automation">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=600&fit=crop" alt="Airbnb Sentiment Analysis">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Mystique1337/AIRBNB-SENTIMENT-ANALYSIS-AND-PREDICTIVE-ANALYTICS" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-automation">Automation</span>
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" alt="AI Learning Copilot - Doc-to-Lesson" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://docs.google.com/document/d/1-Xc5NEzi4u-VBx7EYoQpi5Ns7Mnv4BvUUGnXl_Miy2E/edit?usp=sharing" target="_blank" rel="noopener" class="project-link" title="Write-up"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Learning Copilot - Doc-to-Lesson</h3>
+                        <p class="project-description">Full-stack pipeline turning corporate documents (PDF, DOCX, PPTX, TXT) into on-demand micro-learning: async Node.js proxy &rarr; n8n orchestration &rarr; Supabase pgvector RAG with Cohere reranking &rarr; GPT lessons &rarr; TTS narration &rarr; quizzes &amp; flashcards.</p>
+                        <div class="project-tech"><span class="tech-tag">n8n</span><span class="tech-tag">RAG</span><span class="tech-tag">Supabase pgvector</span><span class="tech-tag">Cohere</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="automation">
+                    <div class="project-image">
+                        <span class="project-badge badge-automation">Automation</span>
+                        <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&h=600&fit=crop" alt="Content Generation &amp; Publishing" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Details"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Content Generation &amp; Publishing</h3>
+                        <p class="project-description">End-to-end content engine for a marketing agency managing the full lifecycle from ideation to publication. Integrates Telegram, OpenAI, n8n, Google Docs, Airtable, and social APIs (LinkedIn, X/Twitter, Gmail) to auto-generate, format, and publish SEO content.</p>
+                        <div class="project-tech"><span class="tech-tag">n8n</span><span class="tech-tag">OpenAI</span><span class="tech-tag">Airtable</span><span class="tech-tag">Social APIs</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="automation">
+                    <div class="project-image">
+                        <span class="project-badge badge-automation">Automation</span>
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop" alt="Talk to a Terabyte Warehouse" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Details"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Talk to a Terabyte Warehouse</h3>
+                        <p class="project-description">AI analytics automation that lets users query massive data warehouses in plain English. Integrates RAG, OpenAI GPT, BigQuery, n8n, and QuickChart to convert natural-language prompts into real-time insights without coding.</p>
+                        <div class="project-tech"><span class="tech-tag">n8n</span><span class="tech-tag">BigQuery</span><span class="tech-tag">RAG</span><span class="tech-tag">QuickChart</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="automation">
+                    <div class="project-image">
+                        <span class="project-badge badge-automation">Automation</span>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Proposal Generation &amp; Delivery" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Details"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Proposal Generation &amp; Delivery</h3>
+                        <p class="project-description">Transforms raw sales-form inputs into polished, client-ready proposals within minutes. Integrates n8n, OpenAI, Google Drive, Airtable, and Gmail to create, enhance, validate, and deliver proposals automatically.</p>
+                        <div class="project-tech"><span class="tech-tag">n8n</span><span class="tech-tag">OpenAI</span><span class="tech-tag">Google Drive</span><span class="tech-tag">Gmail</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="automation">
+                    <div class="project-image">
+                        <span class="project-badge badge-automation">Automation</span>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Reporting &amp; Dashboard Automation" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Details"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Reporting &amp; Dashboard Automation</h3>
+                        <p class="project-description">End-to-end reporting system that consolidates departmental data from multiple Airtable bases into structured, validated, and visualized reports, updating dashboards automatically on a recurring basis with Make and Airtable.</p>
+                        <div class="project-tech"><span class="tech-tag">Make</span><span class="tech-tag">Airtable</span><span class="tech-tag">Dashboards</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="automation">
+                    <div class="project-image">
+                        <span class="project-badge badge-automation">Automation</span>
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop" alt="Invoice Inbox Automation" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Details"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Invoice Inbox Automation</h3>
+                        <p class="project-description">Automated workflow that processes and validates invoices using AI-driven data extraction. Integrates Make, PDF.co AI Invoice Parser, and the OpenAI API to streamline invoice recognition, extraction, and classification.</p>
+                        <div class="project-tech"><span class="tech-tag">Make</span><span class="tech-tag">PDF.co</span><span class="tech-tag">OpenAI</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="automation">
+                    <div class="project-image">
+                        <span class="project-badge badge-automation">Automation</span>
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop" alt="Lead Generation &amp; Outreach" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Details"><i class="fas fa-external-link-alt"></i></a></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Lead Generation &amp; Outreach</h3>
+                        <p class="project-description">AI-powered system that discovers qualified leads, researches their companies, verifies contact information, and writes personalized outreach. Integrates n8n, Apify, Airtable, OpenAI, and Bouncer API for end-to-end prospecting.</p>
+                        <div class="project-tech"><span class="tech-tag">n8n</span><span class="tech-tag">Apify</span><span class="tech-tag">OpenAI</span><span class="tech-tag">Bouncer</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-filter="data">
+                    <div class="project-image">
+                        <span class="project-badge badge-data">Data Science</span>
+                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=600&fit=crop" alt="Airbnb Sentiment Analysis" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://github.com/Mystique1337/AIRBNB-SENTIMENT-ANALYSIS-AND-PREDICTIVE-ANALYTICS" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Airbnb Sentiment Analysis</h3>
-                        <p class="project-description">
-                            Detailed analysis of Airbnb data with sentiment analysis implementation and facial recognition 
-                            for predictive analytics.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Pandas</span>
-                        </div>
+                        <p class="project-description">Analysis of Airbnb data with sentiment analysis and predictive analytics to surface insights from guest reviews.</p>
+                        <div class="project-tech"><span class="tech-tag">NLP</span><span class="tech-tag">Pandas</span><span class="tech-tag">Visualization</span></div>
                     </div>
                 </div>
-                
-                <!-- Project 8 -->
-                <div class="project-card" data-personas="ai-ml, chemical-engineer">
+
+                <div class="project-card" data-filter="data">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=800&h=600&fit=crop" alt="Oil Production Forecasting">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Mystique1337/FORECASTING-OIL-PRODUCTION" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-data">Data Science</span>
+                        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=800&h=600&fit=crop" alt="Oil Production Forecasting" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://github.com/Mystique1337/FORECASTING-OIL-PRODUCTION" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Oil Production Forecasting</h3>
-                        <p class="project-description">
-                            Time series analysis and forecasting model for predicting oil production rates using 
-                            advanced statistical methods and machine learning.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Time Series</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ARIMA</span>
-                        </div>
+                        <p class="project-description">Time-series analysis and forecasting model for predicting oil production rates using statistical methods and machine learning.</p>
+                        <div class="project-tech"><span class="tech-tag">Time Series</span><span class="tech-tag">Python</span><span class="tech-tag">ARIMA</span></div>
                     </div>
                 </div>
-                
-                <!-- Project 9 -->
-                <div class="project-card" data-personas="ai-ml, researcher">
+
+                <div class="project-card" data-filter="data">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" alt="Medical Dataset Analysis">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Mystique1337/INVESTIGATE-A-DATASET-ALX-T-NANODEGREE" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+                        <span class="project-badge badge-data">Data Science</span>
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" alt="Medical Appointment Analysis" loading="lazy" onerror="this.style.display='none'">
+                        <div class="project-overlay"><a href="https://github.com/Mystique1337/INVESTIGATE-A-DATASET-ALX-T-NANODEGREE" target="_blank" rel="noopener" class="project-link" title="Code"><i class="fab fa-github"></i></a></div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Medical Appointment Analysis</h3>
-                        <p class="project-description">
-                            Comprehensive analysis of medical appointment data to identify patterns in patient 
-                            no-shows and provide actionable insights for healthcare management.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Data Analysis</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Visualization</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 10 -->
-                <div class="project-card" data-personas="chemical-engineer, researcher">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1581093458791-9f3c3250a8e0?w=800&h=600&fit=crop" alt="Process Optimization">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Mystique1337" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Process Optimization Suite</h3>
-                        <p class="project-description">
-                            Chemical engineering process optimization tools leveraging computational methods 
-                            to improve efficiency and reduce costs in manufacturing.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">MATLAB</span>
-                            <span class="tech-tag">Optimization</span>
-                            <span class="tech-tag">Simulation</span>
-                        </div>
+                        <p class="project-description">Analysis of medical-appointment data to identify patterns in patient no-shows and provide actionable insights for healthcare management.</p>
+                        <div class="project-tech"><span class="tech-tag">Data Analysis</span><span class="tech-tag">Python</span><span class="tech-tag">Visualization</span></div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="section-cta">
                 <a href="https://github.com/Mystique1337" target="_blank" rel="noopener" class="btn btn-outline">
-                    <i class="fab fa-github"></i>
-                    <span>View All Projects</span>
+                    <i class="fab fa-github"></i><span>GitHub</span>
+                </a>
+                <a href="https://huggingface.co/Shinzmann" target="_blank" rel="noopener" class="btn btn-outline">
+                    <span class="hf-icon">🤗</span><span>Hugging Face</span>
                 </a>
                 <a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="btn btn-outline">
-                    <i class="fas fa-bolt"></i>
-                    <span>Explore Automations</span>
+                    <i class="fas fa-bolt"></i><span>Automations Portfolio</span>
                 </a>
             </div>
         </div>
@@ -1785,164 +1786,6 @@
                 </p>
             </div>
 
-            <h3 class="certs-heading"><i class="fas fa-bolt"></i> Featured Automation Builds</h3>
-            <div class="projects-grid auto-builds">
-                <!-- Build: AI Learning Copilot -->
-                <div class="project-card" data-personas="ai-ml, researcher">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" alt="AI Learning Copilot" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://docs.google.com/document/d/1-Xc5NEzi4u-VBx7EYoQpi5Ns7Mnv4BvUUGnXl_Miy2E/edit?usp=sharing" target="_blank" rel="noopener" class="project-link" title="Project Write-up">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Learning Copilot - Doc-to-Lesson</h3>
-                        <p class="project-description">
-                            Full-stack AI pipeline that turns corporate documents (PDF, DOCX, PPTX, TXT) into on-demand
-                            micro-learning. Architecture: async Node.js proxy &rarr; <strong>n8n orchestration</strong> &rarr;
-                            <strong>Supabase pgvector RAG with Cohere reranking</strong> &rarr; GPT lesson generation &rarr; TTS
-                            narration &rarr; auto-generated quizzes &amp; flashcards, with grounded citations.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">n8n</span>
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">Supabase pgvector</span>
-                            <span class="tech-tag">Cohere</span>
-                            <span class="tech-tag">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Build: Content Generation & Publishing -->
-                <div class="project-card" data-personas="ai-ml, researcher">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&h=600&fit=crop" alt="Content Automation" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Automations Portfolio">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Content Generation &amp; Publishing Automation</h3>
-                        <p class="project-description">
-                            End-to-end content engine integrating <strong>Telegram, OpenAI, n8n, Google Docs, Airtable</strong>,
-                            and major social APIs (LinkedIn, X/Twitter, Gmail) to automatically generate, format, and publish
-                            SEO-optimized content with minimal manual intervention.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">n8n</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">Airtable</span>
-                            <span class="tech-tag">Social APIs</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Build: Natural Language Data Warehouse Query -->
-                <div class="project-card" data-personas="ai-ml, researcher">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop" alt="NL Data Warehouse Query" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Automations Portfolio">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Talk to a Terabyte Warehouse</h3>
-                        <p class="project-description">
-                            AI system that lets non-technical users query terabyte-scale data warehouses in natural language.
-                            Integrates <strong>n8n, BigQuery, OpenAI, and QuickChart</strong> to turn prompts into SQL, run queries,
-                            generate visualizations, and deliver insights, with no coding required.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">n8n</span>
-                            <span class="tech-tag">BigQuery</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">QuickChart</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Build: Sales Proposal Generator -->
-                <div class="project-card" data-personas="ai-ml, researcher">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Sales Proposal Automation" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Automations Portfolio">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Sales Proposal Generator</h3>
-                        <p class="project-description">
-                            Automation using <strong>n8n, Google Workspace, and OpenAI</strong> to generate and deliver customized
-                            sales proposals end-to-end, analyzing client requirements, drafting tailored proposals, and handling
-                            document formatting and email delivery.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">n8n</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">Google Workspace</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Build: Automated Metrics Dashboard -->
-                <div class="project-card" data-personas="ai-ml, researcher">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Metrics Automation" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Automations Portfolio">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automated Metrics Dashboard</h3>
-                        <p class="project-description">
-                            Automation workflow with <strong>Make and Airtable</strong> for yearly metrics calculation and real-time
-                            dashboarding, aggregating data from multiple sources, performing calculations, and generating interactive
-                            dashboards automatically.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Make</span>
-                            <span class="tech-tag">Airtable</span>
-                            <span class="tech-tag">Dashboards</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Build: Invoice Automation -->
-                <div class="project-card" data-personas="ai-ml, researcher">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop" alt="AI Invoice Automation" onerror="this.style.display='none'">
-                        <div class="project-overlay">
-                            <a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="project-link" title="Automations Portfolio">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI-Powered Invoice Automation</h3>
-                        <p class="project-description">
-                            Automation using <strong>Make, Google Workspace, and OpenAI</strong> to log and process invoices,
-                            extracting data from PDFs, validating information, and logging entries into spreadsheets with ~95% accuracy.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Make</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">Google Workspace</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="certs-heading"><i class="fas fa-layer-group"></i> Automation Capabilities</h3>
             <div class="auto-grid">
                 <div class="auto-card">
                     <div class="auto-icon"><i class="fas fa-gears"></i></div>
@@ -2003,201 +1846,6 @@
                 <a href="https://checker-package-db7.notion.site/Ashinze-Emmanuel-29463fe4312581329c8acec54577bf93" target="_blank" rel="noopener" class="btn btn-primary">
                     <i class="fas fa-bolt"></i>
                     <span>Explore the Automations Portfolio</span>
-                </a>
-                <a href="https://github.com/Mystique1337/n8n-workflows" target="_blank" rel="noopener" class="btn btn-outline">
-                    <i class="fab fa-github"></i>
-                    <span>n8n Workflows</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Open-Source AI Models & Deployments Section -->
-    <section class="section models" id="models">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Open-Source AI</span>
-                <h2 class="section-title">Models &amp; Live Deployments</h2>
-                <p class="section-subtitle">
-                    Fine-tuned LLMs, multilingual TTS, and applied AI - open-sourced on
-                    <a href="https://huggingface.co/Shinzmann" target="_blank" rel="noopener">Hugging Face (@Shinzmann)</a>
-                    and shipped to production on Modal, AWS, GCP, and Streamlit.
-                </p>
-            </div>
-
-            <div class="models-stats">
-                <div class="model-stat">
-                    <span class="model-stat-number">13+</span>
-                    <span class="model-stat-label">Open-Source Models</span>
-                </div>
-                <div class="model-stat">
-                    <span class="model-stat-number">25K+</span>
-                    <span class="model-stat-label">Dataset Downloads</span>
-                </div>
-                <div class="model-stat">
-                    <span class="model-stat-number">6+</span>
-                    <span class="model-stat-label">Live Deployments</span>
-                </div>
-                <div class="model-stat">
-                    <span class="model-stat-number">3</span>
-                    <span class="model-stat-label">Hugging Face Spaces</span>
-                </div>
-            </div>
-
-            <div class="models-grid">
-                <!-- Naija-Petro LLM -->
-                <div class="model-card" data-personas="ai-ml, researcher, chemical-engineer">
-                    <a class="model-shot" href="https://naija-petro.shinzii.tech/" target="_blank" rel="noopener">
-                        <img src="assets/img/projects/live/naija-petro.jpg" alt="Naija-Petro live app" loading="lazy" onerror="this.parentElement.style.display='none'">
-                    </a>
-                    <div class="model-card-head">
-                        <span class="model-type"><i class="fas fa-comment-dots"></i> LLM &middot; Text Generation</span>
-                        <span class="model-downloads"><i class="fas fa-download"></i> 750+</span>
-                    </div>
-                    <h3 class="model-name">Naija-Petro 8B &amp; 32B</h3>
-                    <p class="model-base">Qwen3 &middot; QLoRA fine-tune via Unsloth</p>
-                    <p class="model-desc">
-                        Nigeria's first domain-specific LLM for Oil &amp; Gas, fine-tuned on 33,000+ petroleum-engineering
-                        instruction pairs (+0.77 LLM-as-Judge over base across 6 subdisciplines). Paired with a self-updating
-                        dynamic RAG assistant and engineering calculators.
-                    </p>
-                    <div class="model-hosting">
-                        <span class="hosting-badge"><i class="fas fa-server"></i> Modal (vLLM, serverless GPU)</span>
-                        <span class="hosting-badge">🤗 HF Spaces (Zero GPU)</span>
-                        <span class="hosting-badge"><i class="fas fa-database"></i> Supabase pgvector</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://naija-petro.shinzii.tech/" target="_blank" rel="noopener" class="model-link primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://huggingface.co/Shinzmann/naija-petro-8b" target="_blank" rel="noopener" class="model-link"><span class="hf-icon">🤗</span> Model</a>
-                        <a href="https://github.com/Mystique1337/naija-petro" target="_blank" rel="noopener" class="model-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <!-- Naija-Reviewer / Naija-Persona -->
-                <div class="model-card" data-personas="ai-ml, researcher">
-                    <a class="model-shot" href="https://switteefranca2-0--naijapersona-web.modal.run/" target="_blank" rel="noopener">
-                        <img src="assets/img/projects/live/naija-persona.jpg" alt="Naija-Persona live app" loading="lazy" onerror="this.parentElement.style.display='none'">
-                    </a>
-                    <div class="model-card-head">
-                        <span class="model-type"><i class="fas fa-comment-dots"></i> LLM &middot; Text Generation</span>
-                        <span class="model-downloads"><i class="fas fa-download"></i> 100+</span>
-                    </div>
-                    <h3 class="model-name">Naija-Reviewer 8B v2</h3>
-                    <p class="model-base">Llama 3.1 8B &middot; fine-tuned on 20K reviews</p>
-                    <p class="model-desc">
-                        The engine behind <strong>Naija-Persona</strong> - a user-modelling &amp; recommendation agent for
-                        review simulation (InsideNaija) and product recommendation (ShopEasy), trained on 20,000 reviews from
-                        Jumia, Konga, and Nollywood. Served with LangGraph, Langfuse, Pinecone, and Cohere.
-                    </p>
-                    <div class="model-hosting">
-                        <span class="hosting-badge"><i class="fas fa-server"></i> Modal</span>
-                        <span class="hosting-badge"><i class="fas fa-bolt"></i> FastAPI</span>
-                        <span class="hosting-badge">GGUF available</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://switteefranca2-0--naijapersona-web.modal.run/" target="_blank" rel="noopener" class="model-link primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://huggingface.co/Shinzmann/naija-reviewer-8b-v2" target="_blank" rel="noopener" class="model-link"><span class="hf-icon">🤗</span> Model</a>
-                        <a href="https://github.com/Mystique1337/telcoproject" target="_blank" rel="noopener" class="model-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <!-- Soro TTS -->
-                <div class="model-card" data-personas="ai-ml, researcher">
-                    <a class="model-shot" href="https://huggingface.co/Shinzmann/sorotts" target="_blank" rel="noopener">
-                        <img src="assets/img/projects/live/soro-tts.jpg" alt="Soro TTS on Hugging Face" loading="lazy" onerror="this.parentElement.style.display='none'">
-                    </a>
-                    <div class="model-card-head">
-                        <span class="model-type"><i class="fas fa-volume-high"></i> Text-to-Speech</span>
-                        <span class="model-downloads"><i class="fas fa-download"></i> 360+</span>
-                    </div>
-                    <h3 class="model-name">Soro TTS - Yoruba, Hausa &amp; Igbo</h3>
-                    <p class="model-base">Multilingual neural TTS for Nigerian languages</p>
-                    <p class="model-desc">
-                        A family of text-to-speech models bringing natural voice synthesis to three major Nigerian languages,
-                        enabling voice-first AI experiences for underserved language communities.
-                    </p>
-                    <div class="model-hosting">
-                        <span class="hosting-badge">🤗 Hugging Face</span>
-                        <span class="hosting-badge"><i class="fas fa-language"></i> Yoruba · Hausa · Igbo</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://huggingface.co/Shinzmann/sorotts" target="_blank" rel="noopener" class="model-link primary"><span class="hf-icon">🤗</span> Models</a>
-                        <a href="https://huggingface.co/Shinzmann" target="_blank" rel="noopener" class="model-link"><i class="fas fa-layer-group"></i> All Variants</a>
-                    </div>
-                </div>
-
-                <!-- Naija Solar -->
-                <div class="model-card" data-personas="ai-ml, chemical-engineer">
-                    <a class="model-shot" href="https://huggingface.co/spaces/Shinzmann/naija-solar" target="_blank" rel="noopener">
-                        <img src="assets/img/projects/live/naija-solar.jpg" alt="Naija Solar live Hugging Face Space" loading="lazy" onerror="this.parentElement.style.display='none'">
-                    </a>
-                    <div class="model-card-head">
-                        <span class="model-type"><i class="fas fa-microphone"></i> Voice AI &middot; Edge</span>
-                        <span class="model-downloads"><i class="fas fa-award"></i> Hackathon</span>
-                    </div>
-                    <h3 class="model-name">Naija Solar</h3>
-                    <p class="model-base">Voice-first solar sizing &middot; every model under 4B</p>
-                    <p class="model-desc">
-                        Voice-first solar system sizing for Nigeria in five languages, built entirely with small (&lt;4B) models
-                        for the Build Small Hackathon - affordable, offline-friendly clean-energy access at the edge.
-                    </p>
-                    <div class="model-hosting">
-                        <span class="hosting-badge">🤗 HF Spaces (Running)</span>
-                        <span class="hosting-badge"><i class="fas fa-microchip"></i> Sub-4B models</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://huggingface.co/spaces/Shinzmann/naija-solar" target="_blank" rel="noopener" class="model-link primary"><i class="fas fa-external-link-alt"></i> Live Space</a>
-                        <a href="https://github.com/Mystique1337/naija-solar" target="_blank" rel="noopener" class="model-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <!-- Datasets -->
-                <div class="model-card" data-personas="ai-ml, researcher, chemical-engineer">
-                    <div class="model-card-head">
-                        <span class="model-type"><i class="fas fa-database"></i> Open Datasets</span>
-                        <span class="model-downloads"><i class="fas fa-download"></i> 24.8K</span>
-                    </div>
-                    <h3 class="model-name">Open Datasets &amp; Evals</h3>
-                    <p class="model-base">Community-used training &amp; evaluation data</p>
-                    <p class="model-desc">
-                        Published open datasets including <strong>HatespeechTweets</strong> (24.8K+ downloads) for Nigerian-context
-                        content moderation, and <strong>smollm2-1.7b-blind-spots</strong> for small-LLM evaluation and failure analysis.
-                    </p>
-                    <div class="model-hosting">
-                        <span class="hosting-badge">🤗 Hugging Face Datasets</span>
-                        <span class="hosting-badge"><i class="fas fa-shield-halved"></i> Content Moderation</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://huggingface.co/Shinzmann/datasets" target="_blank" rel="noopener" class="model-link primary"><span class="hf-icon">🤗</span> Datasets</a>
-                    </div>
-                </div>
-
-                <!-- ml-intern -->
-                <div class="model-card" data-personas="ai-ml, researcher">
-                    <div class="model-card-head">
-                        <span class="model-type"><i class="fas fa-robot"></i> Agentic AI &middot; Tooling</span>
-                        <span class="model-downloads"><i class="fas fa-code-branch"></i> Open Source</span>
-                    </div>
-                    <h3 class="model-name">ml-intern</h3>
-                    <p class="model-base">An open-source autonomous ML engineer</p>
-                    <p class="model-desc">
-                        An agentic system that <strong>reads papers, trains models, and ships ML models</strong> end-to-end -
-                        an experiment in autonomous, tool-using AI for the full machine-learning lifecycle.
-                    </p>
-                    <div class="model-hosting">
-                        <span class="hosting-badge"><i class="fas fa-diagram-project"></i> Agentic Pipeline</span>
-                        <span class="hosting-badge"><i class="fas fa-wrench"></i> Tool-Calling</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://github.com/Mystique1337/ml-intern" target="_blank" rel="noopener" class="model-link primary"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-cta">
-                <a href="https://huggingface.co/Shinzmann" target="_blank" rel="noopener" class="btn btn-outline">
-                    <span class="hf-icon">🤗</span>
-                    <span>View All Models on Hugging Face</span>
                 </a>
             </div>
         </div>
@@ -2812,5 +2460,25 @@
 
     <!-- Main JavaScript -->
     <script src="assets/js/modern.js"></script>
+
+    <!-- Selected Work category filter -->
+    <script>
+        (function () {
+            const btns = document.querySelectorAll('.work-filter .filter-btn');
+            const cards = document.querySelectorAll('#projects .project-card[data-filter]');
+            if (!btns.length) return;
+            btns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    btns.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    const f = btn.dataset.filter;
+                    cards.forEach(function (card) {
+                        const show = (f === 'all' || card.dataset.filter === f);
+                        card.style.display = show ? '' : 'none';
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
