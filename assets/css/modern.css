@@ -2145,3 +2145,30 @@ body {
     place-items: center;
     color: var(--primary);
 }
+
+/* ===== Hero credibility stat strip ===== */
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+.hero-stat { display: flex; flex-direction: column; min-width: 90px; }
+.hero-stat-num {
+    font-family: var(--font-secondary);
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-stat-text { font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.15rem; }
+
+@media (max-width: 768px) {
+    .hero-stats { gap: var(--spacing-md); }
+    .hero-stat-num { font-size: 1.35rem; }
+}
