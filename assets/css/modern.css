@@ -211,7 +211,7 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    gap: 1.15rem;
     list-style: none;
 }
 
