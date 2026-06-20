@@ -1,4 +1,0 @@
-# Media uploads directory
-This directory is used by Decap CMS to store uploaded images and media files.
-
-Files uploaded through the `/admin` interface will be saved here automatically.
