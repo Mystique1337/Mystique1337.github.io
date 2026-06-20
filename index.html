@@ -665,7 +665,7 @@
                                         <a href="#" target="_blank">BlackCod Group (Bluebulb)</a> &middot; United Kingdom
                                     </p>
                                     <span class="experience-period">
-                                        <i class="far fa-calendar"></i> April 2026 - Present &middot; Part-Time Contract
+                                        <i class="fas fa-briefcase"></i> Part-Time Contract
                                     </span>
                                 </div>
                             </div>
@@ -1486,7 +1486,7 @@
             </div>
 
             <div class="projects-grid">
-                <div class="project-card" data-filter="model">
+                <div class="project-card" data-filter="model app">
                     <div class="project-image">
                         <span class="project-badge badge-model">Open-Source LLM</span>
                         <img src="assets/img/projects/live/naija-petro.jpg" alt="Naija-Petro 8B &amp; 32B" loading="lazy" onerror="this.style.display='none'">
@@ -1499,7 +1499,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-filter="model">
+                <div class="project-card" data-filter="model app">
                     <div class="project-image">
                         <span class="project-badge badge-model">Open-Source LLM</span>
                         <img src="assets/img/projects/live/naija-persona.jpg" alt="Naija-Persona (Naija-Reviewer 8B)" loading="lazy" onerror="this.style.display='none'">
@@ -1525,7 +1525,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-filter="model">
+                <div class="project-card" data-filter="model app">
                     <div class="project-image">
                         <span class="project-badge badge-model">Voice AI &middot; Edge</span>
                         <img src="assets/img/projects/live/naija-solar.jpg" alt="Naija Solar" loading="lazy" onerror="this.style.display='none'">
@@ -2473,7 +2473,8 @@
                     btn.classList.add('active');
                     const f = btn.dataset.filter;
                     cards.forEach(function (card) {
-                        const show = (f === 'all' || card.dataset.filter === f);
+                        const cats = (card.dataset.filter || '').split(' ');
+                        const show = (f === 'all' || cats.indexOf(f) !== -1);
                         card.style.display = show ? '' : 'none';
                     });
                 });
