@@ -68,6 +68,7 @@
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#models" class="nav-link">AI Models</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -1607,6 +1608,185 @@
                 <a href="https://github.com/Mystique1337" target="_blank" class="btn btn-outline">
                     <i class="fab fa-github"></i>
                     <span>View All Projects</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open-Source AI Models & Deployments Section -->
+    <section class="section models" id="models">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Open-Source AI</span>
+                <h2 class="section-title">Models &amp; Live Deployments</h2>
+                <p class="section-subtitle">
+                    Fine-tuned LLMs, multilingual TTS, and applied AI &mdash; open-sourced on
+                    <a href="https://huggingface.co/Shinzmann" target="_blank" rel="noopener">Hugging Face (@Shinzmann)</a>
+                    and shipped to production on Modal, AWS, GCP, and Streamlit.
+                </p>
+            </div>
+
+            <div class="models-stats">
+                <div class="model-stat">
+                    <span class="model-stat-number">13+</span>
+                    <span class="model-stat-label">Open-Source Models</span>
+                </div>
+                <div class="model-stat">
+                    <span class="model-stat-number">25K+</span>
+                    <span class="model-stat-label">Dataset Downloads</span>
+                </div>
+                <div class="model-stat">
+                    <span class="model-stat-number">6+</span>
+                    <span class="model-stat-label">Live Deployments</span>
+                </div>
+                <div class="model-stat">
+                    <span class="model-stat-number">3</span>
+                    <span class="model-stat-label">Hugging Face Spaces</span>
+                </div>
+            </div>
+
+            <div class="models-grid">
+                <!-- Naija-Petro LLM -->
+                <div class="model-card" data-personas="ai-ml, researcher, chemical-engineer">
+                    <div class="model-card-head">
+                        <span class="model-type"><i class="fas fa-comment-dots"></i> LLM &middot; Text Generation</span>
+                        <span class="model-downloads"><i class="fas fa-download"></i> 750+</span>
+                    </div>
+                    <h3 class="model-name">Naija-Petro 8B &amp; 32B</h3>
+                    <p class="model-base">Qwen3 &middot; QLoRA fine-tune via Unsloth</p>
+                    <p class="model-desc">
+                        Nigeria's first domain-specific LLM for Oil &amp; Gas, fine-tuned on 33,000+ petroleum-engineering
+                        instruction pairs (+0.77 LLM-as-Judge over base across 6 subdisciplines). Paired with a self-updating
+                        dynamic RAG assistant and engineering calculators.
+                    </p>
+                    <div class="model-hosting">
+                        <span class="hosting-badge"><i class="fas fa-server"></i> Modal (vLLM, serverless GPU)</span>
+                        <span class="hosting-badge">🤗 HF Spaces (Zero GPU)</span>
+                        <span class="hosting-badge"><i class="fas fa-database"></i> Supabase pgvector</span>
+                    </div>
+                    <div class="model-links">
+                        <a href="https://naija-petro.shinzii.tech/" target="_blank" rel="noopener" class="model-link primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://huggingface.co/Shinzmann/naija-petro-8b" target="_blank" rel="noopener" class="model-link"><span class="hf-icon">🤗</span> Model</a>
+                        <a href="https://github.com/Mystique1337/naija-petro" target="_blank" rel="noopener" class="model-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Naija-Reviewer / Naija-Persona -->
+                <div class="model-card" data-personas="ai-ml, researcher">
+                    <div class="model-card-head">
+                        <span class="model-type"><i class="fas fa-comment-dots"></i> LLM &middot; Text Generation</span>
+                        <span class="model-downloads"><i class="fas fa-download"></i> 100+</span>
+                    </div>
+                    <h3 class="model-name">Naija-Reviewer 8B v2</h3>
+                    <p class="model-base">Llama 3.1 8B &middot; fine-tuned on 20K reviews</p>
+                    <p class="model-desc">
+                        The engine behind <strong>Naija-Persona</strong> &mdash; a user-modelling &amp; recommendation agent for
+                        review simulation (InsideNaija) and product recommendation (ShopEasy), trained on 20,000 reviews from
+                        Jumia, Konga, and Nollywood. Served with LangGraph, Langfuse, Pinecone, and Cohere.
+                    </p>
+                    <div class="model-hosting">
+                        <span class="hosting-badge"><i class="fas fa-server"></i> Modal</span>
+                        <span class="hosting-badge"><i class="fas fa-bolt"></i> FastAPI</span>
+                        <span class="hosting-badge">GGUF available</span>
+                    </div>
+                    <div class="model-links">
+                        <a href="https://switteefranca2-0--naijapersona-web.modal.run/" target="_blank" rel="noopener" class="model-link primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://huggingface.co/Shinzmann/naija-reviewer-8b-v2" target="_blank" rel="noopener" class="model-link"><span class="hf-icon">🤗</span> Model</a>
+                        <a href="https://github.com/Mystique1337/telcoproject" target="_blank" rel="noopener" class="model-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Soro TTS -->
+                <div class="model-card" data-personas="ai-ml, researcher">
+                    <div class="model-card-head">
+                        <span class="model-type"><i class="fas fa-volume-high"></i> Text-to-Speech</span>
+                        <span class="model-downloads"><i class="fas fa-download"></i> 360+</span>
+                    </div>
+                    <h3 class="model-name">Soro TTS &mdash; Yoruba, Hausa &amp; Igbo</h3>
+                    <p class="model-base">Multilingual neural TTS for Nigerian languages</p>
+                    <p class="model-desc">
+                        A family of text-to-speech models bringing natural voice synthesis to three major Nigerian languages,
+                        enabling voice-first AI experiences for underserved language communities.
+                    </p>
+                    <div class="model-hosting">
+                        <span class="hosting-badge">🤗 Hugging Face</span>
+                        <span class="hosting-badge"><i class="fas fa-language"></i> Yoruba · Hausa · Igbo</span>
+                    </div>
+                    <div class="model-links">
+                        <a href="https://huggingface.co/Shinzmann/sorotts" target="_blank" rel="noopener" class="model-link primary"><span class="hf-icon">🤗</span> Models</a>
+                        <a href="https://huggingface.co/Shinzmann" target="_blank" rel="noopener" class="model-link"><i class="fas fa-layer-group"></i> All Variants</a>
+                    </div>
+                </div>
+
+                <!-- Naija Solar -->
+                <div class="model-card" data-personas="ai-ml, chemical-engineer">
+                    <div class="model-card-head">
+                        <span class="model-type"><i class="fas fa-microphone"></i> Voice AI &middot; Edge</span>
+                        <span class="model-downloads"><i class="fas fa-award"></i> Hackathon</span>
+                    </div>
+                    <h3 class="model-name">Naija Solar</h3>
+                    <p class="model-base">Voice-first solar sizing &middot; every model under 4B</p>
+                    <p class="model-desc">
+                        Voice-first solar system sizing for Nigeria in five languages, built entirely with small (&lt;4B) models
+                        for the Build Small Hackathon &mdash; affordable, offline-friendly clean-energy access at the edge.
+                    </p>
+                    <div class="model-hosting">
+                        <span class="hosting-badge">🤗 HF Spaces (Running)</span>
+                        <span class="hosting-badge"><i class="fas fa-microchip"></i> Sub-4B models</span>
+                    </div>
+                    <div class="model-links">
+                        <a href="https://huggingface.co/spaces/Shinzmann/naija-solar" target="_blank" rel="noopener" class="model-link primary"><i class="fas fa-external-link-alt"></i> Live Space</a>
+                        <a href="https://github.com/Mystique1337/naija-solar" target="_blank" rel="noopener" class="model-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Datasets -->
+                <div class="model-card" data-personas="ai-ml, researcher, chemical-engineer">
+                    <div class="model-card-head">
+                        <span class="model-type"><i class="fas fa-database"></i> Open Datasets</span>
+                        <span class="model-downloads"><i class="fas fa-download"></i> 24.8K</span>
+                    </div>
+                    <h3 class="model-name">Open Datasets &amp; Evals</h3>
+                    <p class="model-base">Community-used training &amp; evaluation data</p>
+                    <p class="model-desc">
+                        Published open datasets including <strong>HatespeechTweets</strong> (24.8K+ downloads) for Nigerian-context
+                        content moderation, and <strong>smollm2-1.7b-blind-spots</strong> for small-LLM evaluation and failure analysis.
+                    </p>
+                    <div class="model-hosting">
+                        <span class="hosting-badge">🤗 Hugging Face Datasets</span>
+                        <span class="hosting-badge"><i class="fas fa-shield-halved"></i> Content Moderation</span>
+                    </div>
+                    <div class="model-links">
+                        <a href="https://huggingface.co/Shinzmann/datasets" target="_blank" rel="noopener" class="model-link primary"><span class="hf-icon">🤗</span> Datasets</a>
+                    </div>
+                </div>
+
+                <!-- ml-intern -->
+                <div class="model-card" data-personas="ai-ml, researcher">
+                    <div class="model-card-head">
+                        <span class="model-type"><i class="fas fa-robot"></i> Agentic AI &middot; Tooling</span>
+                        <span class="model-downloads"><i class="fas fa-code-branch"></i> Open Source</span>
+                    </div>
+                    <h3 class="model-name">ml-intern</h3>
+                    <p class="model-base">An open-source autonomous ML engineer</p>
+                    <p class="model-desc">
+                        An agentic system that <strong>reads papers, trains models, and ships ML models</strong> end-to-end &mdash;
+                        an experiment in autonomous, tool-using AI for the full machine-learning lifecycle.
+                    </p>
+                    <div class="model-hosting">
+                        <span class="hosting-badge"><i class="fas fa-diagram-project"></i> Agentic Pipeline</span>
+                        <span class="hosting-badge"><i class="fas fa-wrench"></i> Tool-Calling</span>
+                    </div>
+                    <div class="model-links">
+                        <a href="https://github.com/Mystique1337/ml-intern" target="_blank" rel="noopener" class="model-link primary"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <a href="https://huggingface.co/Shinzmann" target="_blank" rel="noopener" class="btn btn-outline">
+                    <span class="hf-icon">🤗</span>
+                    <span>View All Models on Hugging Face</span>
                 </a>
             </div>
         </div>
