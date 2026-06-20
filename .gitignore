@@ -1,0 +1,5 @@
+
+# Personal source files — not for the public repo
+assets/cv/
+*.pdf
+personal headshot.jpg
