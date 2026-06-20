@@ -1,23 +1,36 @@
 # https://www.robotstxt.org/robotstxt.html
+# Ashinze Emmanuel Chidi - AI/ML & Automation Engineer
+
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://mystique1337.github.io/sitemap.xml
-
-# Disallow admin area from search engines
-User-agent: *
 Disallow: /admin/
 
-# Disallow uploads folder (optional - uncomment if needed)
-# Disallow: /public/images/uploads/
+# AI / answer-engine crawlers (explicitly welcomed)
+User-agent: GPTBot
+Allow: /
 
-# Allow specific crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-# Crawl delay (optional - uncomment if needed)
-# Crawl-delay: 10
+Sitemap: https://portfolio.shinzii.tech/sitemap.xml
