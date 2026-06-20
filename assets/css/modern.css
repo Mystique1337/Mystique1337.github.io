@@ -2272,3 +2272,12 @@ body {
 .badge-app { background: rgba(59, 130, 246, 0.92); }
 .badge-automation { background: rgba(16, 185, 129, 0.92); }
 .badge-data { background: rgba(245, 158, 11, 0.92); }
+
+/* Organisation chip logos */
+.org-chip img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    border-radius: 3px;
+}
+.org-chip i { color: var(--primary); font-size: 0.85rem; }
