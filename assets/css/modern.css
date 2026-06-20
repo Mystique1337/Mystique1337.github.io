@@ -2136,3 +2136,12 @@ body {
 @media (max-width: 768px) {
     .research-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
 }
+
+/* GenAI skill items rendered with Font Awesome icons */
+.skill-item i.skill-fa {
+    font-size: 42px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    color: var(--primary);
+}
