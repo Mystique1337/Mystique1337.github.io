@@ -2208,3 +2208,21 @@ body {
     border-radius: var(--radius-md);
 }
 @media (max-width: 768px) { .auto-grid { grid-template-columns: 1fr; } }
+
+/* Live screenshot thumbnail in model cards */
+.model-shot {
+    display: block;
+    margin: calc(-1 * var(--spacing-lg)) calc(-1 * var(--spacing-lg)) var(--spacing-md);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+.model-shot img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform var(--transition-base);
+}
+.model-shot:hover img { transform: scale(1.04); }
