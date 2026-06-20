@@ -1840,3 +1840,10 @@ body {
         display: none !important;
     }
 }
+
+/* Hugging Face emoji icon sizing in social links/cards */
+.hf-icon {
+    font-size: 1.05em;
+    line-height: 1;
+    display: inline-block;
+}
